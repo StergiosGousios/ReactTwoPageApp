@@ -1,0 +1,19 @@
+.Container {
+    margin: auto; 
+    width: 80%;
+    display : flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* background-color: #3b444b; */
+  }
+
+.title {
+    padding : 20px;
+}
+
+.sectionPicker {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: flex-end;
+    /* justify-content: space-between;  */
+}
