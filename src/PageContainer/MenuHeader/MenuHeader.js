@@ -6,12 +6,10 @@ import { GetMenu } from '../../api/GetMenu';
 const MenuHeader = () => {
     const [MenuLoading, setMenuLoading] = useState(false);
     const [MenuTitles, setMenuTitles] = useState([]);
-    //sconst location = useLocation();
 
     const fetchMenu = async () => {
         setMenuLoading(true);
         const returnedArray = await GetMenu();
-        console.log('MenuHeader got returnedArray : ', returnedArray);
         setMenuTitles(returnedArray || []);
         setMenuLoading(false);
       };
@@ -46,23 +44,9 @@ const MenuHeader = () => {
                    : 
                     <div>
                         <MenuLinks />
-                        <p>Search</p>
                     </div>
                 }
             </div>
-            <p>This is Menu Header</p>
-            {/* { location.pathname === '/' ?
-              <div>
-                  <p>we are in home</p>
-              </div>
-              : 
-              <div>
-                    <p>we are in page2</p>
-                </div>
-            } */}
-                    {/* if (loading) {
-                        return <div className={styles.AlignCenter}>Loading data ...</div>;
-                    } */}
         </div>
     )
 }

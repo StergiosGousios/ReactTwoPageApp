@@ -14,12 +14,10 @@ export const GetPage2Data = async () => {
     } else {
       let json = '';
       json = await response.json();
-      console.log('GetPage2Data Request received response, : ', json);
-     
       return json;
     }
   } catch (error) {
-      console.error('GetPage2Data caught error during Get terms Request : ', error);
+      console.error('Caught error during Get ../page : ', error);
       return ;
   }
 };

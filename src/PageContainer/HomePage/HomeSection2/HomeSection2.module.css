@@ -2,14 +2,11 @@
     display : flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
-.Myborder {
+.divider {
     flex: 1;
-    border-color: black;
-    border-width: thick  3px;
-    border-style: solid;
 }
 
 .smallTitle{

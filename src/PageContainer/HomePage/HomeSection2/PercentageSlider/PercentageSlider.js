@@ -1,39 +1,33 @@
 import React from 'react' ;
 import styles from './PercentageSlider.module.css';
-//import Slider, { Range,createSliderWithTooltip } from 'rc-slider';
-import MySlider from './MySlider/MySlider';
-
+import ReactSlider from 'react-slider';
 const PercentageSlider = ({graphText, statsArray}) => {
-    // const { createSliderWithTooltip } = Slider;
-    // const Range = createSliderWithTooltip(Slider.Range);
-    // const { Handle } = Slider;
-    //const SliderWithTooltip = createSliderWithTooltip(Slider);
 
     return (
         <div className={styles.PercentageSliderContainer}>
             <div className={styles.smallTitle}>
-                {/* <h2>{graphText}</h2> */}
-                <p><strong>{graphText}</strong></p>
+                <h4>{graphText}</h4>
             </div>
-            {/* <MySlider PercentageValue={40} /> */}
             <div>
                 {statsArray.map( (element, index) =>(
-                    <div key={index} className={styles.row} >
-                        <div>   
-                            {/* <SliderWithTooltip /> */}
-                                
-                                {/* <Slider >
-                                    <Range />
-                                </Slider> */}
-                            {/* <Slider
-                                value={element.amount}
-                                // onChange={this.onSliderChange}
-                                // onAfterChange={this.onAfterChange}
-                            /> */}
+                    <div>
+                        <div key={index} className={styles.row} >
+                            <div className={styles.PercentageTitle}>{element.title.toLocaleUpperCase()}</div> 
+                            <div> {element.amount * 0.1}%</div>  
                         </div>
-                        <p> {element.title}</p> 
-                        <p> {element.amount * 0.1}%</p>  
-                    </div>
+                        <ReactSlider 
+                            disabled={true}
+                            className={styles.MySlider}
+                            thumbClassName={styles.MyThumb}
+                            trackClassName={styles.MyTrack}
+                            defaultValue={element.amount * 0.1}
+                            min={0}
+                            max={100}
+                            renderThumb={(props, state) => 
+                                <div {...props}>{state.valueNow}</div>
+                            }
+                        />
+                    </div>                         
                 ))} 
             </div>
         </div>

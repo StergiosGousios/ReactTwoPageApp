@@ -3,7 +3,6 @@ import styles from './Page2.module.css';
 import { GetPage2Data } from '../../api/GetPage2Data';
 import Card from './Card/Card';
 
-
 const Page2 = () => {
     const [Page2LoadingComplete, setPage2LoadingComplete] = useState(false);
     const [Tile, setTile] = useState("");
@@ -12,7 +11,6 @@ const Page2 = () => {
     const fetchPage2 = async () => {  
         setPage2LoadingComplete(false);
         const returnedArray = await GetPage2Data();
-        console.log('Page2 got returnedArray : ', returnedArray[0]);
         setTile(returnedArray[0].description || "")
         setCardData(returnedArray[0].tiles || []);
         setPage2LoadingComplete(true);

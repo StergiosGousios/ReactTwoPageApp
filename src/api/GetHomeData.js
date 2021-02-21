@@ -14,12 +14,10 @@ export const GetHomeData = async () => {
     } else {
       let json = '';
       json = await response.json();
-      console.log('GetHomeData Request received response, : ', json);
-     
       return json;
     }
   } catch (error) {
-      console.error('GetHomeData caught error during Get terms Request : ', error);
+      console.error('Caught error during Get ../home : ', error);
       return ;
   }
 };

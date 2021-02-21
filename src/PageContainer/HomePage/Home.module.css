@@ -1,10 +1,8 @@
 .Container {
     margin: auto; 
-    width: 80%;
+    width: 70%;
     display : flex;
     flex-direction: column;
-    /* justify-content: space-around; */
-    /* background-color: #3b444b; */
   }
 
 .title {
@@ -13,9 +11,7 @@
 
 .sectionPicker {
     display: flex;
-    /* flex-direction: row; */
     justify-content: flex-end;
-    /* justify-content: space-between;  */
 }
 
 .link {

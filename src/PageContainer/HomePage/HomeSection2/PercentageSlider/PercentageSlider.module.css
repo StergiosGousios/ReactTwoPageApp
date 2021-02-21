@@ -4,16 +4,56 @@
     justify-content: space-between;
 }
 
-
 .row {
     display : flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 10px;
 }
 
 .smallTitle{
-    /* display: flex; */
     text-align: left;
     font-size: larger;
-    /* justify-content: flex-start; */
+}
+
+.MySlider{
+    width: 100%;
+    height: 25px;
+}
+
+.MySlider{
+    width: 100%;
+    height: 25px;
+}
+
+.MyThumb{
+    height: 25px;
+    line-height: 25px;
+    width: 25px;
+    text-align: center;
+    background-color: #1167b1;
+    color: #fff;
+    border-radius: 50%;
+    cursor: grab;
+
+}
+
+.MyTrack{
+    background-color: gray;
+    top: 0;
+    bottom: 0;
+    border-radius: 999px;
+}
+
+
+.MyTrack:nth-of-type(1){
+    background-color:  antiquewhite;
+}
+
+.MyTrack:nth-of-type(2){
+    background-color: white;
+}
+
+.PercentageTitle {
+    text-align: left;
 }

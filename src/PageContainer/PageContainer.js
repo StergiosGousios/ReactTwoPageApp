@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './PageContainer.module.css';
 import MenuHeader from './MenuHeader/MenuHeader';
 import Home from './HomePage/Home';
@@ -6,8 +6,6 @@ import Page2 from './Page2/Page2';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const PageContainer = () => {
-
-
 
     return (
         <Router>

@@ -15,8 +15,6 @@ const Home = () => {
     const fetchHome = async () => {  
         setHomeLoadingComplete(false);
         const returnedArray = await GetHomeData();
-        console.log('[Home.js] got returnedArray[0].sections[0].images : ', returnedArray[0].sections[0].images);
-        console.log('[Home.js] got returnedArray[0].sections[1] : ', returnedArray[0].sections[1]);
         setHomeTitle(returnedArray[0].description || "");
         setSection1Images(returnedArray[0].sections[0].images || [] );
         setSection2Data(returnedArray[0].sections[1]|| [] );
@@ -24,7 +22,6 @@ const Home = () => {
     };
 
     useEffect(() => {
-        console.log("[Home.js] location.pathname is ", location.pathname);
         fetchHome();
       }, []);
 

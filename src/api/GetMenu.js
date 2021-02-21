@@ -14,12 +14,10 @@ export const GetMenu = async () => {
     } else {
       let json = '';
       json = await response.json();
-      console.log('GetMenu Request received response, : ', json);
-     
       return json;
     }
   } catch (error) {
-      console.error('GetMenu caught error during Get terms Request : ', error);
+      console.error('Caught error during Get ../menu : ', error);
       return ;
   }
 };
