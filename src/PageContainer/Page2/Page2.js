@@ -5,17 +5,17 @@ import Card from './Card/Card';
 
 
 const Page2 = () => {
-    const [Page2Loading, setPage2Loading] = useState(false);
+    const [Page2LoadingComplete, setPage2LoadingComplete] = useState(false);
     const [Tile, setTile] = useState("");
     const [CardData, setCardData] = useState([]);
 
     const fetchPage2 = async () => {  
-        setPage2Loading(true);
+        setPage2LoadingComplete(false);
         const returnedArray = await GetPage2Data();
         console.log('Page2 got returnedArray : ', returnedArray[0]);
         setTile(returnedArray[0].description || "")
         setCardData(returnedArray[0].tiles || []);
-        setPage2Loading(false);
+        setPage2LoadingComplete(true);
     };
     
     const CardContrainer = () => {
@@ -41,7 +41,7 @@ const Page2 = () => {
 
     return (
         <div className={styles.Container}>
-            { Page2Loading 
+            { !Page2LoadingComplete 
                 ?   <div>Loading data ...</div>
                 :   <div>
                         <p  className={styles.title}>{Tile}</p>

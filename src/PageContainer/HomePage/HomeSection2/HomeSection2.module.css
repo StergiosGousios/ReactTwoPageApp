@@ -1,0 +1,19 @@
+.Section2Container {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.Myborder {
+    flex: 1;
+    border-color: black;
+    border-width: thick  3px;
+    border-style: solid;
+}
+
+.smallTitle{
+    display: flex;
+    justify-content: flex-start;
+    color:cornflowerblue;
+}

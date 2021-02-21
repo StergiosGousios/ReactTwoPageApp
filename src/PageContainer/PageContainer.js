@@ -14,7 +14,7 @@ const PageContainer = () => {
             <div>
                 <MenuHeader />
                 <Switch>   
-                    <Route exact path={['/', '/Home']}>
+                    <Route exact path={['/', '/Home', '/Home/1', '/Home/2' ]}>
                         <Home />
                     </Route>
                     <Route exact path='/Page 2'>

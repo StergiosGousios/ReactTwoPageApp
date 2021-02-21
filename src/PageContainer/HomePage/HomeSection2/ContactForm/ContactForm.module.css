@@ -1,0 +1,10 @@
+.FormContainer {
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grayTitle {
+    color: gray;
+    font-size: small;
+}

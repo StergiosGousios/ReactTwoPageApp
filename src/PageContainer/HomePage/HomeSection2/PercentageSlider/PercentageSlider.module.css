@@ -1,0 +1,19 @@
+.PercentageSliderContainer {
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.row {
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.smallTitle{
+    /* display: flex; */
+    text-align: left;
+    font-size: larger;
+    /* justify-content: flex-start; */
+}
